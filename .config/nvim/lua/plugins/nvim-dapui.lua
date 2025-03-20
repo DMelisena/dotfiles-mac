@@ -1,12 +1,26 @@
 return {
   "rcarriga/nvim-dap-ui",
-  dependencies = { "mfussenegger/nvim-dap", },
+  dependencies = {
+    "mfussenegger/nvim-dap",
+    "nvim-neotest/nvim-nio",
+  },
   lazy = true,
   config = function()
     require("dapui").setup({
       controls = {
         element = "repl",
         enabled = true,
+        icons = {
+          disconnect = "",
+          run_last = "",
+          terminate = "⏹︎",
+          pause = "⏸︎",
+          play = "",
+          step_into = "󰆹",
+          step_out = "󰆸",
+          step_over = "",
+          step_back = "",
+        },
       },
       floating = {
         border = "single",
@@ -14,7 +28,11 @@ return {
           close = { "q", "<Esc>" },
         },
       },
-      icons = { collapsed = "", expanded = "", current_frame = "" },
+      icons = {
+        collapsed = "",
+        expanded = "",
+        current_frame = "",
+      },
       layouts = {
         {
           elements = {
@@ -24,12 +42,12 @@ return {
             { id = "watches", size = 0.25 },
           },
           position = "left",
-          size = 60,
+          size = 40,
         },
         {
           elements = {
-            { id = "repl", size = 0.35 },
-            { id = "console", size = 0.65 },
+            { id = "repl", size = 0.4 },
+            { id = "console", size = 0.6 },
           },
           position = "bottom",
           size = 10,
@@ -38,6 +56,23 @@ return {
     })
 
     local dap, dapui = require("dap"), require("dapui")
+    local group = vim.api.nvim_create_augroup("dapui_config", { clear = true })
+
+    -- hide ~ in DAPUI
+    vim.api.nvim_create_autocmd("BufWinEnter", {
+      group = group,
+      pattern = "DAP*",
+      callback = function()
+        vim.wo.fillchars = "eob: "
+      end,
+    })
+    vim.api.nvim_create_autocmd("BufWinEnter", {
+      group = group,
+      pattern = "\\[dap\\-repl\\]",
+      callback = function()
+        vim.wo.fillchars = "eob: "
+      end,
+    })
 
     dap.listeners.after.event_initialized["dapui_config"] = function()
       dapui.open()
