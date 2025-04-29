@@ -1,4 +1,4 @@
-alt - t : open -a 'iterm'
+alt - t : open -a 'kitty'
 alt - f : open -a 'safari'
 #                     be found at https://github.com/koekeishiya/skhd/issues/1
 #

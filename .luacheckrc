@@ -1,0 +1,1 @@
+ignore = { "trailing_whitespace" }
