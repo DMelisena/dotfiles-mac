@@ -113,7 +113,7 @@ echo "loading zoxide"
 export PATH="$PATH:/Users/elisena/.local/bin"
 eval "$(mise activate zsh)"
 
-# Allow Ranger to `cd` your current shell by exiting with capital Q
+# Allow Ranger to `cd` your current shell by exiting with lowercase q
 function ranger {
   local IFS=$'\t\n'
   local tempfile="$(mktemp -t tmp.XXXXXX)"
