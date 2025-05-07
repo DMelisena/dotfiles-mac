@@ -1,4 +1,4 @@
-on-focus-changed = ['move-mouse window-lazy-center'] 
+on-focus-changed = ['move-mouse window-lazy-center']
 # Place a copy of this config to ~/.aerospace.toml
 # After that, you can edit ~/.aerospace.toml to your liking
 
@@ -216,3 +216,7 @@ automatically-unhide-macos-hidden-apps = false
     down = 'volume down'
     up = 'volume up'
     shift-down = ['volume set 0', 'mode main']
+
+[[on-window-detected]]
+if.app-id = 'org.mozilla.firefox'
+run = 'layout tiling'

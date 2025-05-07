@@ -5,6 +5,8 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
+alias xc='open -a Xcode *.xcodeproj'
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -106,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 eval "$(zoxide init zsh)"
 alias vim="nvim"
 alias cd="z"
-echo "loading zoxide"
+# echo "loading zoxide"
 #
 
 # Created by `pipx` on 2025-03-16 09:31:33
@@ -132,3 +134,7 @@ function ranger {
   fi
   command rm -f -- "$tempfile" 2>/dev/null
 }
+
+CERTIFICATE_FILE_NAME=~/Downloads/aps.cer
+CERTIFICATE_KEY_FILE_NAME=~/Documents/CertificateSigningRequest.certSigningRequest
+TOPIC=com.trial.clockSync
