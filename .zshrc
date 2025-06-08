@@ -4,6 +4,7 @@
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="$PATH:/Users/elisena/.cargo/bin"
 
 alias xc='open -a Xcode *.xcodeproj'
 
@@ -12,7 +13,6 @@ alias xc='open -a Xcode *.xcodeproj'
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -138,3 +138,7 @@ function ranger {
 CERTIFICATE_FILE_NAME=~/Downloads/aps.cer
 CERTIFICATE_KEY_FILE_NAME=~/Documents/CertificateSigningRequest.certSigningRequest
 TOPIC=com.trial.clockSync
+
+DEVICE_TOKEN=device token for your app
+APNS_HOST_NAME=api.sandbox.push.apple.com
+export EDITOR='nvim'
