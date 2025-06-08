@@ -149,11 +149,10 @@ exec-on-workspace-change = ['/bin/bash', '-c',
     alt-0 = 'workspace 10'
     alt-leftSquareBracket= 'workspace 11'
     alt-rightSquareBracket= 'workspace 12'
-    alt-y = 'workspace 11' # In your config, you can drop workspace bindings that you don't need
-    alt-u = 'workspace 12'
-    alt-i = 'workspace 13'
-    alt-o = 'workspace 14'
-    alt-p = 'workspace 15'
+    alt-u = 'workspace 11'
+    alt-i = 'workspace 12'
+    alt-o = 'workspace 13'
+    alt-p = 'workspace 14'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     alt-shift-1 = ['move-node-to-workspace 1','workspace 1']
@@ -166,11 +165,10 @@ exec-on-workspace-change = ['/bin/bash', '-c',
     alt-shift-8 = ['move-node-to-workspace 8','workspace 8']
     alt-shift-9 = ['move-node-to-workspace 9','workspace 9']
     alt-shift-0 = ['move-node-to-workspace 10','workspace 10']
-    alt-shift-y = ['move-node-to-workspace 11','workspace 10']
-    alt-shift-u = ['move-node-to-workspace 12','workspace 10']
-    alt-shift-i = ['move-node-to-workspace 13','workspace 10']
-    alt-shift-o = ['move-node-to-workspace 14','workspace 10']
-    alt-shift-p = ['move-node-to-workspace 15','workspace 10']
+    alt-shift-u = ['move-node-to-workspace 11','workspace 11']
+    alt-shift-i = ['move-node-to-workspace 12','workspace 12']
+    alt-shift-o = ['move-node-to-workspace 13','workspace 13']
+    alt-shift-p = ['move-node-to-workspace 14','workspace 14']
     alt-shift-leftSquareBracket= ['move-node-to-workspace 11','workspace 11']
     alt-shift-rightSquareBracket= ['move-node-to-workspace 12','workspace 12']
 
