@@ -1,5 +1,5 @@
 return {
-  "folke/snacks.nvim",
+  "wojciech-kulik/snacks.nvim",
   priority = 1000,
   lazy = false,
   ---@type snacks.Config
