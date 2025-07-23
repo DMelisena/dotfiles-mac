@@ -9,3 +9,4 @@ vim.g.mapleader = " "
 local map = function(mode, keys, func, desc)
   vim.keymap.set(mode, keys, func, { desc = desc })
 end
+vim.opt.foldmethod = "marker"
