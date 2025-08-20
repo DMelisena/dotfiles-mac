@@ -142,3 +142,6 @@ TOPIC=com.trial.clockSync
 DEVICE_TOKEN=device token for your app
 APNS_HOST_NAME=api.sandbox.push.apple.com
 export EDITOR='nvim'
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
