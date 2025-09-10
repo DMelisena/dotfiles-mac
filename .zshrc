@@ -143,6 +143,11 @@ TOPIC=com.trial.clockSync
 DEVICE_TOKEN=device token for your app
 APNS_HOST_NAME=api.sandbox.push.apple.com
 export EDITOR='nvim'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export GEMINI_API_KEY="AIzaSyDbsEWmx8nrkBeyWdL23ImiPcR38G555dY"
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
