@@ -8,6 +8,7 @@ export PATH="$PATH:/Users/elisena/.cargo/bin"
 
 alias xc='open -a Xcode *.xcodeproj'
 alias python='python3'
+alias p='ping 1.1.1.1'
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
