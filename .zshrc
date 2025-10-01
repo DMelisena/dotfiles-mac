@@ -151,3 +151,8 @@ export GEMINI_API_KEY="AIzaSyDbsEWmx8nrkBeyWdL23ImiPcR38G555dY"
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+# History configuration
+export HISTFILE=~/.zsh_history
+export HISTSIZE=10000
+export SAVEHIST=10000
+setopt HIST_IGNORE_DUPS
