@@ -1,0 +1,23 @@
+{
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
+  },
+  "mcpServers": {
+    "voice-mode": {
+      "command": "uvx",
+      "args": [
+        "voice-mode"
+      ],
+      "env": {
+        "TTS_BASE_URL": "http://127.0.0.1:8880/v1",
+        "VOICEMODE_TTS_BASE_URL": "http://127.0.0.1:8880/v1",
+        "VOICEMODE_STT_BASE_URL": "http://127.0.0.1:2022/v1",
+        "VOICEMODE_PREFER_LOCAL": "true",
+        "TTS_VOICE": "af_heart",
+        "OPENAI_API_KEY": "dummy-key"
+      }
+    }
+  }
+}
