@@ -92,11 +92,22 @@ sketchybar --add item space_separator left \
   script="$PLUGIN_DIR/space_windows.sh" \
   --subscribe space_separator aerospace_workspace_change front_app_switched space_windows_change
 
-# Front app!!
+# Front app
 sketchybar --add item front_app left \
-  --set front_app icon.drawing=off \
-  script="$PLUGIN_DIR/front_app.sh" \
-  --subscribe front_app front_app_switched
+ --set front_app script="$PLUGIN_DIR/front_app2.sh" \
+ icon.drawing=off \
+ background.height=26 \
+ background.padding_left=0 \
+ background.padding_right=10 \
+ background.border_width=0 \
+ background.border_color=0xffffffff \
+ background.corner_radius=5 \
+ background.color=0xff303040 \
+ label.color=0xffffffff \
+ label.padding_left=10 \
+ label.padding_right=10 \
+ associated_display=active \
+ --subscribe front_app front_app_switched
 
 ##### Adding Right Items #####
 # In the same way as the left items we can add items to the right side.

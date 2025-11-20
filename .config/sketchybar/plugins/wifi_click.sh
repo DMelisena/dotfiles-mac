@@ -1,16 +1,17 @@
 #!/bin/sh
 
-source "$CONFIG_DIR/colors.sh"
+WIFI_STATUS=$(networksetup -getairportpower en0 | awk '{print $NF}')
 
-WIFI_STATUS=$(networksetup -getairportpower en0 | awk '/AirPower/ {print $4}')
-
-if [ "$BUTTON" = "left" ]; then
-  if [ "$WIFI_STATUS" = "on" ]; then
+if [ "$BUTTON" = "left" ] || [ "$BUTTON" = "right" ]; then
+  if [ "$WIFI_STATUS" = "On" ]; then
     networksetup -setairportpower en0 off
   else
     networksetup -setairportpower en0 on
   fi
-fi
 
-# Trigger an update
-sketchybar --trigger wifi_change
+  # Wait a moment for the change to take effect
+  sleep 1
+
+  # Trigger WiFi update to show new status
+  sketchybar --trigger wifi_change
+fi
