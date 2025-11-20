@@ -128,14 +128,16 @@ sketchybar --add item clock right \
   icon.padding_right=2 \
   label.padding_left=2 \
   icon.y_offset=0 \
-  label.y_offset=0 \
+  label.y_offset=10 \
   --add item wifi right \
   --set wifi script="$PLUGIN_DIR/wifi.sh" \
+  update_freq=10 \
   --subscribe wifi wifi_change \
-  --subscribe wifi mouse.clicked \
-  label.font="Hack Nerd Font:Italic:13.0" \
-  icon.color=0xffffffff \
-  label.color=0xffffffff
+  icon.padding_right=1 \
+  label.padding_left=1 \
+  icon.y_offset=0 \
+  label.y_offset=0 \
+  click_script="$CONFIG_DIR/plugins/wifi_click.sh"
 
 sketchybar    
 sketchybar --update

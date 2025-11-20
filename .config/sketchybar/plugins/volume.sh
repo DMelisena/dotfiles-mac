@@ -12,21 +12,20 @@ if [ "$SENDER" = "volume_change" ]; then
   case "$VOLUME" in
   [6-9][0-9] | 100)
     ICON="󰕾"
-    COLOR=$COLOR_GREEN
     ;;
   [3-5][0-9])
     ICON="󰖀"
-    COLOR=$COLOR_FOREGROUND
     ;;
   [1-9] | [1-2][0-9])
     ICON="󰕿"
-    COLOR=$COLOR_YELLOW
     ;;
   *)
     ICON="󰖁"
-    COLOR=$COLOR_RED
     ;;
   esac
+
+# Always use foreground color
+COLOR=$COLOR_FOREGROUND
 
   sketchybar --set "$NAME" \
     icon="$ICON" \
