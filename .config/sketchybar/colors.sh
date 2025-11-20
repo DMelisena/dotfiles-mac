@@ -29,3 +29,6 @@ export COLOR_BLUE="0xff81a1c1" #"#81a1c1"
 export COLOR_PURPLE="0xffbf88bc" #"#bf88bc"  this is actually pink
 export COLOR_CYAN="0xff7dcfff" #"#88c0d0"
 export COLOR_WHITE="0xffe5e9f0" #"#e5e9f0"
+
+# Additional colors for better visibility
+export COLOR_ORANGE="0xffd08770" # "#d08770"

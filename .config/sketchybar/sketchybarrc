@@ -61,7 +61,7 @@ for sid in $(aerospace list-workspaces --monitor 1); do
     label.padding_left=0 \
     label.y_offset=2.5 \
     label.shadow.drawing=off \
-    label.shadow.color=0xA0000000 \
+    label.shaow.color=0xA0000000 \
     label.shadow.distance=4 \
     click_script="aerospace workspace $sid" \
     script="$CONFIG_DIR/plugins/aerospace.sh $sid"
@@ -111,12 +111,24 @@ sketchybar --add item front_app left \
 #
 sketchybar --add item clock right \
   --set clock update_freq=10 script="$PLUGIN_DIR/clock.sh" \
+  icon.padding_right=2 \
+  label.padding_left=2 \
+  icon.y_offset=0 \
+  label.y_offset=0 \
   --add item volume right \
   --set volume script="$PLUGIN_DIR/volume.sh" \
   --subscribe volume volume_change \
+  icon.padding_right=1 \
+  label.padding_left=1 \
+  icon.y_offset=0 \
+  label.y_offset=0 \
   --add item battery right \
   --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
   --subscribe battery system_woke power_source_change \
+  icon.padding_right=2 \
+  label.padding_left=2 \
+  icon.y_offset=0 \
+  label.y_offset=0 \
   --add item wifi right \
   --set wifi script="$PLUGIN_DIR/wifi.sh" \
   --subscribe wifi wifi_change \
