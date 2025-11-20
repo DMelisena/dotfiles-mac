@@ -1,62 +1,36 @@
-#!/bin/bash
+#!/bin/sh
 
-# Filename: ~/github/dotfiles-latest/sketchybar/felixkratz/icons.sh
+# Menu icon
+export ICON_CAT=󰄛
+export ICON_SETTINGS=󰒓
+export ICON_TASKMANAGER=󱕍
+export ICON_SLEEP=󰌾
 
-# General Icons
-LOADING=􀖇
-APPLE=􀣺
-PREFERENCES=􀺽
-ACTIVITY=􀒓
-LOCK=􀒳
-BELL=􀋚
-BELL_DOT=􀝗
-BLUETOOTH=
-RESTART=
+# Space icons
+export ICON_ORGMODE=
+export ICON_VIM=
+export ICON_FIREFOX=
+export ICON_MAIL=󰇮
+export ICON_EMACS=
+export ICON_SPACE_SHUTTLE=
+export ICON_SPACE_INVADERS=󰯉
+export ICON_SPACE_STATION=󱎃
+export ICON_MUSIC=󰝚
 
-# Git Icons
-GIT_ISSUE=􀍷
-GIT_DISCUSSION=􀒤
-GIT_PULL_REQUEST=􀙡
-GIT_COMMIT=􀡚
-GIT_INDICATOR=􀂓
+export ICON_CLOCK=󰥔
+export ICON_CALENDAR=󰃶 # Status
 
-# Spotify Icons
-SPOTIFY_BACK=􀊎
-SPOTIFY_PLAY_PAUSE=􀊈
-SPOTIFY_NEXT=􀊐
-SPOTIFY_SHUFFLE=􀊝
-SPOTIFY_REPEAT=􀊞
+export ICON_WIFI=󰖩
+export ICON_WIFI_OFF=󰖪
+export ICON_VPN=󰦝
 
-# Yabai Icons
-YABAI_STACK=􀏭
-YABAI_FULLSCREEN_ZOOM=􀏜
-YABAI_PARENT_ZOOM=􀥃
-YABAI_FLOAT=􀢌
-YABAI_GRID=􀧍
+export ICONS_VOLUME=(󰸈 󰕿 󰖀 󰕾)
 
-# Battery Icons
-BATTERY_100=􀛨
-BATTERY_75=􀺸
-BATTERY_50=􀺶
-BATTERY_25=􀛩
-BATTERY_0=􀛪
-BATTERY_CHARGING=􀢋
+export ICONS_BATTERY=(󰂎 󰁺 󰁻 󰁼 󰁽 󰁾 󰁿 󰂀 󰂁 󰂂 󰁹)
+export ICONS_BATTERY_CHARGING=(󰢟 󰢜 󰂆 󰂇 󰂈 󰢝 󰂉 󰢞 󰂊 󰂋 󰂅)
 
-# Volume Icons
-VOLUME_100=􀊩
-VOLUME_66=􀊧
-VOLUME_33=􀊥
-VOLUME_10=􀊡
-VOLUME_0=􀊣
+export ICON_SWAP=󰁯
+export ICON_RAM=󰍛
+export ICON_DISK=󰋊
+export ICON_CPU=󰻠
 
-# WiFi
-WIFI_CONNECTED=􀙇
-WIFI_DISCONNECTED=􀙈
-ETHERNET_CONNECTED=󰈀
-
-# svim
-MODE_NORMAL=􀂯
-MODE_INSERT=􀂥
-MODE_VISUAL=􀂿
-MODE_CMD=􀂙
-MODE_PENDING=􀈏

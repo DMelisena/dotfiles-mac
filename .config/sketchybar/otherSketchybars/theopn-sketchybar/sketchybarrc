@@ -22,18 +22,18 @@ HEIGHT=30
 ##### Bar Appearance #####
 # https://felixkratz.github.io/SketchyBar/config/bar
 bar=(
-  color=$COLOR_TRANSPARENT
+  color=0xff000000            # Pure black to hide notch
   position=top
   height=$HEIGHT              # Bar height
-  margin=7                    # Overall margin around the bar
-  y_offset=5                  # Space b/w top of the screen and the bar
-  corner_radius=$RADIUS       # Bar corner radius
+  margin=0                    # No margin for seamless look
+  y_offset=0                  # No offset for seamless notch blend
+  corner_radius=0             # No corner radius
   border_width=0              # 0 for no border
-  blur_radius=0               # 0 for the full transparency
+  blur_radius=0               # 0 for full opacity
   padding_left=$PADDING
   padding_right=$PADDING
-  topmost=off                 # Draw the bar over a window and the stock menubar
-  #sticky=on                   # Bar stays on when changing workspace
+  topmost=on                  # Draw over everything including notch
+  sticky=on                   # Bar stays on when changing workspace
 )
 
 sketchybar --bar "${bar[@]}"
