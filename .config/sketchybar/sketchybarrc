@@ -24,8 +24,8 @@ default=(
   icon.font="Hack Nerd Font:Bold:17.0"
   label.font="sketchybar-app-font:Regular:16.0"
   # label.font="SF Pro:Semibold:17.0"
-  icon.color=0xffc0caf5
-  label.color=0xffc0caf5
+  icon.color=0xffffffff
+  label.color=0xffffffff
   icon.padding_left=4
   icon.padding_right=4
   label.padding_left=4
@@ -46,20 +46,20 @@ for sid in $(aerospace list-workspaces --monitor 1); do
     --subscribe space.$sid aerospace_workspace_change \
     --set space.$sid \
     drawing=off \
-    background.color=0xff414868 \
+    background.color=0xff303040 \
     background.corner_radius=5 \
     background.drawing=on \
-    background.border_color=0xff7aa2f7 \
+    background.border_color=0xff505060 \
     background.border_width=0 \
     background.height=25 \
     icon="$sid" \
     icon.padding_left=10 \
     icon.shadow.distance=4 \
     icon.shadow.color=0xA0000000 \
-    label.font="SF Pro:Regular:16.0" \
-    label.padding_right=20 \
+    label.font="SF Pro:Regular:20.0" \
+    label.padding_right=22\
     label.padding_left=0 \
-    label.y_offset=-1 \
+    label.y_offset=2.5 \
     label.shadow.drawing=off \
     label.shadow.color=0xA0000000 \
     label.shadow.distance=4 \
@@ -122,8 +122,8 @@ sketchybar --add item clock right \
   --subscribe wifi wifi_change \
   --subscribe wifi mouse.clicked \
   label.font="Hack Nerd Font:Italic:13.0" \
-  icon.color=0xffc0caf5 \
-  label.color=0xffc0caf5
+  icon.color=0xffffffff \
+  label.color=0xffffffff
 
 sketchybar    
 sketchybar --update

@@ -10,19 +10,19 @@ FOCUSED=$(aerospace list-workspaces --focused 2>/dev/null)
 
 # Determine if this workspace should be visible and its appearance
 if [ "$WORKSPACE" = "$FOCUSED" ]; then
-  # Focused workspace - show with Tokyo Night blue background
+  # Focused workspace - pure white text on medium dark background
   sketchybar --set "space.$WORKSPACE" \
-    background.color=0xff7aa2f7 \
+    background.color=0xff404050 \
     background.border_color=0xff7aa2f7 \
     background.border_width=2 \
-    icon.color=0xffc0caf5 \
+    icon.color=0xffffffff \
     background.drawing=on
 else
-  # Non-focused workspace - show with dark background
+  # Non-focused workspace - dark background with dimmer white text
   sketchybar --set "space.$WORKSPACE" \
-    background.color=0xff414868 \
-    background.border_color=0xff565f89 \
+    background.color=0xff303040 \
+    background.border_color=0xff505060 \
     background.border_width=1 \
-    icon.color=0xff9aa5ce \
+    icon.color=0xffcccccc \
     background.drawing=on
 fi
