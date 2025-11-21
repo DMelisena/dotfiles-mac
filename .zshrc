@@ -141,7 +141,7 @@ CERTIFICATE_FILE_NAME=~/Downloads/aps.cer
 CERTIFICATE_KEY_FILE_NAME=~/Documents/CertificateSigningRequest.certSigningRequest
 TOPIC=com.trial.clockSync
 
-DEVICE_TOKEN=device token for your app
+# DEVICE_TOKEN=device token for your app
 APNS_HOST_NAME=api.sandbox.push.apple.com
 export EDITOR='nvim'
 
@@ -157,3 +157,10 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=10000
 export SAVEHIST=10000
 setopt HIST_IGNORE_DUPS
+export KMP_DUPLICATE_LIB_OK=TRUE
+export KMP_DUPLICATE_LIB_OK=TRUE
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/elisena/.lmstudio/bin"
+# End of LM Studio CLI section
+
