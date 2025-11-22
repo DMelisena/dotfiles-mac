@@ -122,6 +122,31 @@ sketchybar --add item front_app left \
 # volume is registered. More info about the event system can be found here:
 # https://felixkratz.github.io/SketchyBar/config/events
 #
+#
+#
+#
+#
+
+# sketchybar --add item calendar right \
+#   --set calendar icon=􀉉 \
+#   update_freq=1 \
+#   script="$PLUGIN_DIR/calendar.sh" \
+#   label="$(/bin/bash -c "date '+%a %d. %b %I:%M %p'")" \
+#   background.height=25 \
+#   click_script="sketchybar --set calendar popup.drawing=toggle" \
+#   popup.drawing=off \
+#   padding_left=0 \
+#   padding_right=0 \
+#   background.color=0xff232136 \
+#   popup.background.border_width=2 \
+#   popup.background.corner_radius=5 \
+#   popup.background.border_color=0xffffffff \
+#   popup.background.color=0xff232136 \
+#   popup.background.height=200 \
+#   popup.height=200 \
+#   popup.y_offset=38 \
+#   popup.align=right
+
 sketchybar --add item clock right \
   --set clock update_freq=10 script="$PLUGIN_DIR/clock.sh" \
   icon.padding_right=2 \
@@ -139,6 +164,8 @@ sketchybar --add item clock right \
   --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
   --subscribe battery system_woke power_source_change \
   icon.padding_right=2 \
+  icon.font="SF Pro:Regular:20.0" \
+  label.font="SF Pro:Regular:30.0" \
   label.padding_left=2 \
   icon.y_offset=0 \
   label.y_offset=10 \
@@ -152,7 +179,7 @@ sketchybar --add item clock right \
   label.y_offset=0 \
   click_script="$CONFIG_DIR/plugins/wifi_click.sh"
 
-sketchybar    
+sketchybar
 sketchybar --update
 
 # --add item swap e \

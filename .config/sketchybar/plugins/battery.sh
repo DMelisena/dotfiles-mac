@@ -3,8 +3,16 @@
 source "$CONFIG_DIR/icons.sh"
 source "$CONFIG_DIR/colors.sh"
 
-PERCENTAGE="$(pmset -g batt | grep -Eo "\d+%" | cut -d% -f1)"
-CHARGING="$(pmset -g batt | grep 'AC Power')"
+# Get battery percentage more robustly
+# Extract the percentage
+BATT_OUTPUT=$(pmset -g batt)
+PERCENTAGE=$(echo "$BATT_OUTPUT" | grep -o '[0-9]*%' | head -1 | tr -d '%')
+CHARGING=$(echo "$BATT_OUTPUT" | grep -c 'AC Power')
+
+# Fallback method if the above fails
+if [ -z "$PERCENTAGE" ] || [ "$PERCENTAGE" = "" ]; then
+  PERCENTAGE=$(echo "$BATT_OUTPUT" | grep -o '[0-9]*%' | head -1 | tr -d '%')
+fi
 
 if [ "$PERCENTAGE" = "" ]; then
   exit 0
@@ -29,7 +37,7 @@ case "${PERCENTAGE}" in
     ;;
 esac
 
-if [[ "$CHARGING" != "" ]]; then
+if [ "$CHARGING" -gt 0 ]; then
   ICON=""
 fi
 
