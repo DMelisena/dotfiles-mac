@@ -73,13 +73,15 @@ for sid in $(aerospace list-workspaces --monitor 1 --empty no); do
 
   sketchybar --set space.$sid drawing=on
 
-  icon_strip=" "
+  icon_strip=""
   if [ "${apps}" != "" ]; then
     while read -r app; do
       icon_strip+=" $($CONFIG_DIR/plugins/icon_map_fn.sh "$app")"
     done <<<"${apps}"
+    # Add spacing between icon groups
+    icon_strip=" ${icon_strip} "
   else
-    icon_strip=""
+    icon_strip=" "
   fi
   sketchybar --set space.$sid label="$icon_strip"
 done
